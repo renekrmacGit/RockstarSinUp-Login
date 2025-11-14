@@ -249,9 +249,9 @@ pre {
 
 /* Sporočilo o napaki znotraj kartice */
 .error-sporocilo {
-    color: #d00; 
-    font-size: 14px;
-    font-weight: bold;
+	background-color:#BD0808;
+    color: #FFFFFF; 
+    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
@@ -284,7 +284,7 @@ pre {
 
 /* Stili za kartico 2 (Policy) */
 .policy-podnaslov {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #4d4d4d;
     margin: 0 0 10px 0;
@@ -302,18 +302,15 @@ pre {
 }
 
 .policy-seznam a {
-    color: #000; 
-    font-weight: bold;
-    text-decoration: none;
-}
-.policy-seznam a:hover {
+    color: #1a1a1a; 
     text-decoration: underline;
 }
+
 
 .policy-checkbox {
     display: flex;
     align-items: flex-start; 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%;
 }
 .policy-checkbox input[type="checkbox"] {
@@ -321,7 +318,7 @@ pre {
     margin-right: 10px;
 }
 .policy-checkbox label {
-    font-size: 14px;
+    font-size: 16px;
     color: #4d4d4d;
     line-height: 1.4;
 }
@@ -349,14 +346,14 @@ pre {
 .gumb-nazaj:hover {
     background-color: #e0e0e0;
 }
+ 
 
-/* Končni rdeči error box (po neuspešni prijavi starosti) */
-.final-error-box {
+
+.final-error-box {                       /*  nek div da nrdim padding */
     background-color: #c20d0d;
     color: white;
     width: 100%;
     max-width: 532px; 
-    padding: 30px;
     box-sizing: border-box;
     border-radius: 2px; 
 }
@@ -380,13 +377,15 @@ pre {
     text-decoration: underline;
 }
 
-.final-error-footer {
+.final-error-footer {                  
     border-top: 1px solid #a00; 
     padding-top: 20px;
+	padding-right:18px;
+	padding-bottom: 20px;
     text-align: right;
-    color: #cccccc;
-    font-size: 14px;
-    font-weight: bold;
+    color: #ffffff;
+	background-color:#00000061;
+    font-size: 12px;
 }
 
 
@@ -468,7 +467,7 @@ pre {
     top: 5px; 
     left: 10px;
     font-size: 11px; 
-    color: #999;
+    color: 999;
     pointer-events: none;
     z-index: 1; 
 }
