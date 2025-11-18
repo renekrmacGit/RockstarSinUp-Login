@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         errorVerify.textContent = '';
-        alert('Verification complete! (Placeholder)'); // Samo za test
+        window.location.href = 'login.html';
     });
 
     // --- KARTICA 4: Link "Back to sign up" ---
