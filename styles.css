@@ -1,70 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* Osnovne nastavitve za celo stran */
 body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, blinkmacsystemfont, 'Roboto', Arial, sans-serif;
     color: white;
-    
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    min-height: 100vh; 
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     box-sizing: border-box;
-    
-    background-color: #1a1a1a; 
-    background-image: url('bg-repeat.png'); 
+    background-color: #1a1a1a;
+    background-image: url('bg-repeat.png');
     background-repeat: repeat;
-    background-size: 256px; 
+    background-size: 256px;
 }
 
 /* Glavni okvir, ki drži vsebino na sredini */
 .stran-vsebina {
     width: 100%;
-    max-width: 532px; 
-    flex-grow: 1; 
+    max-width: 532px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    justify-content: center; 
+    justify-content: center;
 }
 
 .logo-okvir {
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
 }
 
 .logo-slika {
-    width: 101px; 
-    height: 101px; 
+    width: 101px;
+    height: 101px;
     display: block;
 }
 
 /* Bela kartica za forme */
 .kartica-forma {
     border-radius: 2px;
-    background-color: #ffffff; 
-    padding: 20px; 
-    width: 90%; 
+    background-color: #ffffff;
+    padding: 20px;
+    width: 90%;
     box-sizing: border-box;
     color: #000000;
-	
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .naslov-kartica {
-    font-size: 24px; 
-    font-weight: 700; 
-    color:#4d4d4d;
-    margin:8px; 
+    font-size: 24px;
+    font-weight: 600;
+    color: #4d4d4d;
+    margin: 8px;
 }
 
 .podnaslov-kartica {
-    color: #4d4d4d; 
-    font-size: 16px; 
+    color: #4d4d4d;
+    font-size: 16px;
     margin-top: 0;
     margin-bottom: 5px;
 }
@@ -72,57 +66,55 @@ body {
 /* Polja za datum rojstva */
 .dob-polja {
     display: flex;
-    gap: 12px; 
+    gap: 12px;
     margin-bottom: 20px;
     width: 100%;
 }
 
 .polje-okvir {
-    flex-grow: 1; 
+    flex-grow: 1;
     position: relative;
 }
 
 /* Oranžen gumb "Next" */
 .gumb-next {
-    width: auto; 
-    min-width: 20%; 
-    padding: 10px 15px; 
+    width: auto;
+    min-width: 20%;
+    padding: 10px 15px;
     border: none;
-    background-color: #fcaf17; 
+    background-color: #fcaf17;
     color: black;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: bold;
     border-radius: 3px;
     cursor: pointer;
-    margin-bottom: 0; 
+    margin-bottom: 0;
     transition: background-color 0.2s;
     align-self: flex-end;
 }
-.gumb-next:hover {
-    background-color: #e58800; 
-}
 
+.gumb-next:hover {
+    background-color: #e58800;
+}
 
 /* Stili za izbirna polja (dropdown) */
 .izbira {
     width: 100%;
     padding: 10px;
-    padding-right: 50px; 
-    
-    background-color: #ffffff; 
+    padding-right: 50px;
+    background-color: #ffffff;
     color: #000000;
-    border: 1px solid #e0e0e0; 
-    
+    border: 1px solid #e0e0e0;
     border-radius: 3px;
-    appearance: none; 
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    font-family:inherit;
-    font-size: 16px; 
+    font-family: inherit;
+    font-size: 16px;
     cursor: pointer;
-    height: 45px; 
+    height: 45px;
     line-height: 20px;
-    outline: none; 
+    outline: none;
 }
 
 /* Črta v dropdownu */
@@ -130,23 +122,23 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    right: 40px; 
+    right: 40px;
     width: 1px;
-    height: 45px; 
-    background-color: #e0e0e0; 
+    height: 45px;
+    background-color: #e0e0e0;
     transform: translateY(-50%);
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 /* Puščica v dropdownu */
 .polje-okvir::after {
-    content: '❯'; 
+    content: '❯';
     position: absolute;
-    right: 15px; 
+    right: 15px;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg); 
-    color: #aaaaaa; 
-    pointer-events: none; 
+    transform: translateY(-50%) rotate(90deg);
+    color: #aaaaaa;
+    pointer-events: none;
     font-size: 16px;
 }
 
@@ -154,67 +146,79 @@ body {
     display: none;
 }
 
+.izbira:hover {
+    border-color: #fcaf17;
+}
+
+.izbira:focus {
+    border-color: #006fff;
+    border-width: 2px;
+}
+
 /* Spodnji tekst za prijavo (zunaj kartice) */
 .prijava-tekst-zunaj {
-    margin-top:12px;
-    color: #ffffff; 
-    font-size: 16px; 
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 16px;
     text-align: center;
-    padding: 15px; 
-    width: 80%; 
-    max-width: 532px; 
+    padding: 15px;
+    width: 80%;
+    max-width: 532px;
     box-sizing: border-box;
 }
 
 .prijava-link-zunaj {
-    color: #fcaf17; 
-    text-decoration: underline;
-}
-.prijava-link-zunaj:hover {
+    color: #fcaf17;
     text-decoration: underline;
 }
 
+.prijava-link-zunaj:hover {
+    text-decoration: underline;
+}
 
 /* Noga strani (Footer) */
 .spodnja-noga {
     width: 100%;
     text-align: center;
-    font-size: 11px; 
-    color: #999999; 
-    padding: 15px 0 10px 0; 
-    margin-top: auto; 
+    font-size: 11px;
+    color: #999999;
+    padding: 15px 0 10px 0;
+    margin-top: auto;
 }
 
 .spodnja-noga ul {
     font-size: 12px;
-    list-style: none; 
+    list-style: none;
     margin: 11px;
     padding: 0;
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     color: #999999;
 }
+
 .spodnja-noga li {
-    color: #999999; 
+    color: #999999;
 }
+
 .spodnja-noga li:not(:first-child):::before {
     content: '|';
     color: #999999;
-    padding: 0 10px; 
+    padding: 0 10px;
 }
+
 .spodnja-noga a {
-    color: #999999; 
+    color: #999999;
     text-decoration: none;
 }
+
 .spodnja-noga a:hover {
     text-decoration: underline;
     font-family: -apple-system, blinkmacsystemfont, 'Roboto', Arial, sans-serif;
     color: white;
 }
 
-
-.rockstar{
+.rockstar {
     color: #999;
     display: inline-block;
     font-size: .60rem;
@@ -223,7 +227,7 @@ body {
     text-transform: uppercase;
 }
 
-.ostalo{
+.ostalo {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -235,50 +239,59 @@ body {
     padding: 0;
     transition: color .2s ease-out;
 }
-.ostalo:hover{
+
+.ostalo:hover {
     text-decoration: underline;
 }
-
 
 pre {
     font-family: -apple-system, blinkmacsystemfont, 'Roboto', Arial, sans-serif;
     font-size: 12px;
-    white-space: pre-wrap; 
+    white-space: pre-wrap;
     margin: 0;
+}
+
+a {
+    font-weight: 500;
 }
 
 /* Sporočilo o napaki znotraj kartice */
 .error-sporocilo {
-	background-color:#BD0808;
-    color: #FFFFFF; 
+    background-color: #BD0808;
+    color: #FFFFFF;
     font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1px;
+    margin-bottom: 20px;
     width: 100%;
     text-align: left;
+    padding: 8px;
+}
+
+.error-sporocilo:empty {
+    display: none;
 }
 
 /* Rdeč error box (za starost) */
 .error-box-zunaj {
-    background-color: #c20d0d; 
+    background-color: #c20d0d;
     color: white;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     font-size: 15px;
     line-height: 1.5;
-    border-radius: 2px; 
+    border-radius: 2px;
 }
 
 .error-box-zunaj p {
-    margin: 0 0 15px 0; 
+    margin: 0 0 15px 0;
 }
 
 .error-box-koda {
     display: flex;
     justify-content: space-between;
-    color: #cccccc; 
+    color: #cccccc;
     font-size: 13px;
 }
 
@@ -291,7 +304,7 @@ pre {
 }
 
 .policy-seznam {
-    list-style-type: disc; 
+    list-style-type: disc;
     padding-left: 20px;
     margin: 0 0 20px 0;
     width: 100%;
@@ -302,41 +315,81 @@ pre {
 }
 
 .policy-seznam a {
-    color: #1a1a1a; 
+    color: #1a1a1a;
     text-decoration: underline;
 }
 
-
+/* --- CUSTOM CHECKBOX --- */
 .policy-checkbox {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     margin-bottom: 10px;
     width: 100%;
+    padding-left: 20px; /* Odmik za poravnavo */
+    box-sizing: border-box;
 }
+
 .policy-checkbox input[type="checkbox"] {
-    margin-top: 2px;
-    margin-right: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    margin-top: 0;
+    margin-right: 12px;
+    margin-left: -20px; /* Premik na rob paddinga */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
 }
+
+.policy-checkbox input[type="checkbox"]:checked {
+    background-color: #ffffff;
+    border-color: #cccccc;
+    box-shadow: inset 0 0 0 2px #fcaf17; /* Notranja oranžna obroba */
+}
+
+.policy-checkbox input[type="checkbox"]:checked::after {
+    content: '';
+    width: 10px;
+    height: 5px;
+    border: solid grey;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    margin-top: -2px;
+}
+
+.policy-checkbox input[type="checkbox"]:hover {
+    border-color: #999;
+}
+
 .policy-checkbox label {
     font-size: 16px;
     color: #4d4d4d;
     line-height: 1.4;
+    flex-grow: 1;
 }
 
 .gumbi-policy {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 100%;
 }
 
-/* Bel gumb "Back" */
 .gumb-nazaj {
     width: auto;
     padding: 14px 20px;
     border: 1px solid #ccc;
     background-color: #f7f7f7;
     color: black;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
@@ -346,16 +399,14 @@ pre {
 .gumb-nazaj:hover {
     background-color: #e0e0e0;
 }
- 
 
-
-.final-error-box {                       /*  nek div da nrdim padding */
+.final-error-box {
     background-color: #c20d0d;
     color: white;
     width: 100%;
-    max-width: 532px; 
+    max-width: 532px;
     box-sizing: border-box;
-    border-radius: 2px; 
+    border-radius: 2px;
 }
 
 .final-error-box h2 {
@@ -372,22 +423,21 @@ pre {
 }
 
 .final-error-box a {
-    color: white; 
+    color: white;
     font-weight: bold;
     text-decoration: underline;
 }
 
-.final-error-footer {                  
-    border-top: 1px solid #a00; 
+.final-error-footer {
+    border-top: 1px solid #a00;
     padding-top: 20px;
-	padding-right:18px;
-	padding-bottom: 20px;
+    padding-right: 18px;
+    padding-bottom: 20px;
     text-align: right;
     color: #ffffff;
-	background-color:#00000061;
+    background-color: #00000061;
     font-size: 12px;
 }
-
 
 /* Stili za Kartico 3 (Lebdeče labele) */
 .floating-group {
@@ -396,23 +446,23 @@ pre {
     margin-bottom: 20px;
     background-color: #ffffff;
     border-radius: 3px;
-    border: 1px solid #e0e0e0; 
+    border: 1px solid #e0e0e0;
 }
 
 .floating-input {
     width: 100%;
-    padding: 18px 10px 2px 10px; 
-    background-color: transparent; 
+    padding: 18px 10px 2px 10px;
+    background-color: transparent;
     color: #000000;
-    border: none; 
+    border: none;
     border-radius: 3px;
-    font-family: inherit; 
-    font-size: 16px; 
-    height: 55px; 
+    font-family: inherit;
+    font-size: 16px;
+    height: 55px;
     line-height: normal;
-    outline: none; 
-    box-sizing: border-box; 
-    appearance: none; 
+    outline: none;
+    box-sizing: border-box;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;
@@ -421,14 +471,14 @@ pre {
 
 .floating-label {
     position: absolute;
-    top: 18px; 
-    left: 10px; 
-    transform: translateY(0); 
+    top: 18px;
+    left: 10px;
+    transform: translateY(0);
     color: #666;
-    font-size: 16px; 
+    font-size: 16px;
     pointer-events: none;
     z-index: 2;
-    transition: all 0.2s ease; 
+    transition: all 0.2s ease;
 }
 
 /* Animacija za lebdečo labelo */
@@ -441,10 +491,10 @@ pre {
 }
 
 .floating-input:focus {
-    border-color: transparent; 
+    border-color: transparent;
     box-shadow: none;
 }
-/* Fokus stil na ovitku */
+
 .floating-group:has(.floating-input:focus) {
     border-color: #006FFF;
     box-shadow: 0 0 0 1px #006FFF;
@@ -464,17 +514,17 @@ pre {
 
 .floating-label-select {
     position: absolute;
-    top: 5px; 
+    top: 5px;
     left: 10px;
-    font-size: 11px; 
+    font-size: 11px;
     color: 999;
     pointer-events: none;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .floating-group-select .izbira {
-    height: 55px; 
-    padding-top: 25px; 
+    height: 55px;
+    padding-top: 25px;
     padding-bottom: 5px;
     font-size: 16px;
 }
@@ -484,10 +534,10 @@ pre {
     top: 50%;
     transform: translateY(-50%);
 }
-.floating-group-select.polje-okvir::before {
-     height: 55px; 
-}
 
+.floating-group-select.polje-okvir::before {
+    height: 55px;
+}
 
 .profile-setup-list {
     list-style: none;
@@ -496,41 +546,40 @@ pre {
     width: 100%;
 }
 
-
 /* Stili za modalno okno (popup) */
 #policy-overlay {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 #policy-modal {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; 
-    max-width: 650px; 
+    width: 90%;
+    max-width: 650px;
     background-color: #fff;
-    z-index: 1001; 
+    z-index: 1001;
     border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    display: flex; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
     flex-direction: column;
 }
 
 .policy-modal-header {
-    background-color: #fcae17; 
+    background-color: #fcae17;
     color: black;
     padding: 12px 20px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     font-size: 18px;
     font-weight: bold;
@@ -548,17 +597,18 @@ pre {
     line-height: 1;
     padding: 0;
 }
+
 #policy-modal-close-btn:hover {
     color: #000;
 }
 
 .policy-modal-content {
-    background-color: #e0f0f8; 
-    color: #333; 
+    background-color: #e0f0f8;
+    color: #333;
     padding: 20px;
-    max-height: 70vh; 
-    overflow-y: auto; 
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+    max-height: 70vh;
+    overflow-y: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -572,10 +622,11 @@ pre {
 
 /* Stili za Kartico 4 (Verify) */
 .podnaslov-kartica b {
-    color: #000; 
+    color: #000;
 }
+
 .podnaslov-kartica a.inline-link {
-    color: #000; 
+    color: #000;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -587,8 +638,9 @@ pre {
     margin-bottom: 20px;
     width: 100%;
 }
+
 .recaptcha-text a.inline-link-small {
-    color: #666; 
+    color: #666;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -605,6 +657,7 @@ pre {
     font-size: 16px;
     color: #4d4d4d;
 }
+
 .resend-area a.inline-link {
     color: #000;
     font-weight: bold;
@@ -622,8 +675,9 @@ pre {
     max-width: 532px;
     box-sizing: border-box;
 }
+
 .nazaj-link-zunaj a {
-    color: #fcaf17; 
+    color: #fcaf17;
     text-decoration: underline;
     font-weight: bold;
 }
