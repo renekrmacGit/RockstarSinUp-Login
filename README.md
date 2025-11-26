@@ -1,72 +1,73 @@
 Rockstar Games Authentication Clone
-This is a frontend project that replicates the Sign In and Sign Up flows of the Rockstar Games Social Club. The project is built exclusively using vanilla HTML, CSS, and JavaScript, without any external frameworks or libraries.
+A high-fidelity frontend recreation of the Rockstar Games Social Club authentication flow. This project simulates the complete user journey from a custom landing page to account creation and final login, using local storage to simulate a backend database.
 
-📂 Project Overview
-The application simulates the complete user journey, from age verification to the final login. The focus is on DOM manipulation, multi-step form validation, and specific CSS styling techniques (e.g., "floating labels").
+⚠️ Disclaimer: This is an educational portfolio project designed to demonstrate UI/UX and JavaScript logic skills. It is not the official Rockstar Games website.
 
-🛠️ Implemented Features
-1. Registration (index.html & register.js)
-The registration process is divided into a multi-step "Wizard" logic, where JavaScript controls the transitions:
+🚀 Key Features
+1. Anti-Phishing Entry Page (intro.html)
+To ensure transparency and differentiate this project from the official site, the entry point is a distinct Disclaimer Page.
 
-Step 1: Age Verification (Age Gate):
+Users must acknowledge the project is for educational purposes before entering the demo.
 
-Logic validates the input birthdate against the current date.
+2. Smart Registration Wizard (register.js)
+A multi-step form with logic gating:
 
-The isUnderAge() function automatically blocks registration if the user is under 18 and displays a specific error message.
+Age Verification: Validates the user's birthdate. Automatically blocks access if the user is under 18.
 
-Step 2: Policy Acceptance:
+Policy Acceptance: Dynamic modal requiring the user to manually accept Terms & Privacy Policy.
 
-Dynamically generates a modal window (createPolicyModal) displaying the Terms of Service.
+Data Persistence: When a user registers, their Email, Password, Nickname, and Country are saved securely to the browser's Local Storage.
 
-Users must manually check the boxes to proceed.
+Verification Simulation:
 
-Step 3: Account Creation:
+Mock email verification step.
 
-Email Validation: Checks for correct format (must contain @ and .).
+Enforces a strict 6-digit code format.
 
-Password Validation: Checks for length and required content.
+Upon success, displays a confirmation modal before redirecting to Login.
 
-Step 4: Verification:
+3. Functional Login System (login.js)
+Credential Validation: The login form reads from Local Storage to check if the entered email and password match the registered user.
 
-Simulates an email verification code input. Clicking "Submit" redirects the user to the login page.
+Real-time UI: Features "Floating Label" animations and a Show/Hide Password toggle.
 
-2. Login (login.html & login.js)
-The login page contains the following logic:
+Successful Auth: If credentials match, the user is redirected to the real RockstarGames.com website.
 
-Floating Labels:
+Error Handling: Displays specific error messages for incorrect passwords or non-existent accounts.
 
-Custom CSS/JS logic (initFloatingLabels) moves the label above the input field when the user starts typing or when the field contains a value.
+🛠️ Technical Stack
+HTML5: Semantic structure with strict ID naming conventions.
 
-Password Visibility Toggle:
+CSS3: Custom styling variables, responsive Flexbox layout, and official-style assets (Gold/Black theme).
 
-A "Show/Hide" button allows switching the input type between password and text.
+Vanilla JavaScript (ES6): No frameworks used. Handles DOM manipulation, form validation, and Local Storage management.
 
-Input Validation:
+⚡ How to Test the Demo
+Start: Open intro.html in your web browser.
 
-On clicking "Sign in", the script validates that fields are not empty and the email format is valid.
+Enter: Click the "Enter Demo Project" button.
 
-Error Handling: Invalid fields receive a red border (CSS class .error-border) and an error message is displayed below the field.
+Sign Up:
 
-Success simulates a redirection to index.html.
+Enter a date of birth (must be 18+).
 
-3. User Interface (CSS)
-Visual Identity: Uses the specific Rockstar Games color palette (Rockstar Gold #fcaf17, dark grey backgrounds).
+Accept policies.
 
-Custom Checkboxes: Standard checkboxes are restyled using CSS pseudo-elements (::after and ::before).
+Fill in details (e.g., Email: test@demo.com, Pass: password123).
 
-Responsive Design: Uses Flexbox to center cards and adapt the layout for different screen sizes.
+Enter any 6-digit code in the verification box.
 
-🚀 How to Run
-Since this project does not use Node.js or build tools, running it is simple:
+Login:
 
-Download all files into the same folder (maintaining the js/ and styles/ structure).
+You will be redirected to login.html.
 
-Open the index.html file (for Registration) or login.html file (for Login) directly in your web browser.
+Enter the exact credentials you just created.
 
-⚠️ Limitations
-No Backend: This project does not have a backend system. Data is not stored in a database; all logic runs in the browser.
+Success: You will be redirected to the real Rockstar website.
 
-Security: Validation is client-side only and serves to demonstrate UI/UX skills.
+Fail: Try entering a wrong password to see the error handling.
 
 👤 Author
 Rene Krmac
+
+This project is for educational purposes only and is not affiliated with Take-Two Interactive or Rockstar Games.
