@@ -1,4 +1,4 @@
-           # Rockstar Games Authentication Clone
+# Rockstar Games Authentication Clone
 
 
 A high-fidelity frontend recreation of the Rockstar Games Social Club authentication flow. This project simulates the complete user journey from a custom landing page to account creation and final login, using local storage to simulate a backend database.
